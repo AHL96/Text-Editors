@@ -5,7 +5,6 @@ set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 Plugin 'https://github.com/VundleVim/Vundle.vim'
 Plugin 'https://github.com/mattn/emmet-vim'
-Plugin 'https://github.com/scrooloose/nerdtree'
 Plugin 'https://github.com/mbbill/code_complete.git'
 Plugin 'https://github.com/ervandew/supertab.git'
 Plugin 'https://github.com/easymotion/vim-easymotion'
@@ -26,6 +25,7 @@ Plugin 'https://github.com/honza/vim-snipmate'
 Plugin 'https://github.com/sidorares/node-vim-debugger.git'
 Plugin 'https://github.com/moll/vim-node.git'
 Plugin 'https://github.com/rust-lang/rust.vim.git'
+Plugin 'https://github.com/kien/ctrlp.vim.git'
 
 
 call vundle#end()
@@ -60,7 +60,6 @@ set incsearch
 set showmatch
 set cursorline
 
-map <F9> :NERDTreeToggle<return>
 map <F5> :PymodeRun<return>
 
 """disabling the arrow keys
@@ -85,8 +84,7 @@ let g:syntastic_auto_loc_list = 1
 let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
 
-let g:undotree_WindowLayout = 3
-nnoremap <F8> :UndotreeToggle<cr>
+let g:undotree_WindowLayout = 1
 nnoremap <F7> :Tagbar<return>
 
 if has("persistent_undo")
