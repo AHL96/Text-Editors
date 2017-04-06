@@ -70,7 +70,7 @@ nnoremap <down> :Autoformat<return>:SyntasticCheck<return>:w<return>
 inoremap <left> <nop>
 inoremap <right> <nop>
 inoremap <up> <nop>
-inoremap <down> <nop>
+inoremap <down> <C-[>:Autoformat<return>:SyntasticCheck<return>:w<return>i
 inoremap <C-n> <C-w><C-w>
 nnoremap <C-n> <C-w><C-w>
 
