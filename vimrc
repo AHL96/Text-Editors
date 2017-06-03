@@ -26,6 +26,7 @@ Plugin 'https://github.com/sidorares/node-vim-debugger.git'
 Plugin 'https://github.com/moll/vim-node.git'
 Plugin 'https://github.com/rust-lang/rust.vim.git'
 Plugin 'https://github.com/kien/ctrlp.vim.git'
+Plugin 'https://github.com/OmniSharp/omnisharp-vim.git'
 
 
 call vundle#end()
