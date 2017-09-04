@@ -1,115 +1,77 @@
-execute pathogen#infect()
-set nocompatible
-filetype off
-set rtp+=~/.vim/bundle/Vundle.vim
-call vundle#begin()
-Plugin 'https://github.com/VundleVim/Vundle.vim'
-Plugin 'https://github.com/mattn/emmet-vim'
-Plugin 'https://github.com/mbbill/code_complete.git'
-Plugin 'https://github.com/ervandew/supertab.git'
-Plugin 'https://github.com/easymotion/vim-easymotion'
-Plugin 'https://github.com/Chiel92/vim-autoformat'
-Plugin 'https://github.com/mbbill/undotree.git'
-Plugin 'https://github.com/jiangmiao/auto-pairs.git'
-Plugin 'https://github.com/vim-scripts/taglist.vim.git'
-Plugin 'https://github.com/klen/python-mode.git'
-Plugin 'https://github.com/tpope/vim-surround.git'
-Plugin 'https://github.com/terryma/vim-multiple-cursors.git'
-Plugin 'https://github.com/scrooloose/syntastic.git'
-Plugin 'https://github.com/vim-scripts/FuzzyFinder.git'
-Plugin 'https://github.com/myusuf3/numbers.vim.git'
-Plugin 'https://github.com/vim-airline/vim-airline.git'
-Plugin 'https://github.com/majutsushi/tagbar.git'
-Plugin 'https://github.com/Shougo/neocomplcache.vim.git'
-Plugin 'https://github.com/honza/vim-snipmate'
-Plugin 'https://github.com/sidorares/node-vim-debugger.git'
-Plugin 'https://github.com/moll/vim-node.git'
-Plugin 'https://github.com/rust-lang/rust.vim.git'
-Plugin 'https://github.com/kien/ctrlp.vim.git'
-
-
-call vundle#end()
-filetype plugin indent on
-autocmd StdinReadPre * let s:std_in=1
-"autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
-syntax enable
-
-colorscheme molokai
-
-set wildmenu
-set showcmd
-set hlsearch
-set ignorecase
-set smartcase
-set autoindent
-set nostartofline
-set ruler
-set laststatus=2
-set confirm
-set t_vb=
-set cmdheight=2
 set number
-set notimeout ttimeout ttimeoutlen=200
-set shiftwidth=4
-set softtabstop=4
-set expandtab
-set magic
+set autoread
+set wildmenu
+set ruler
+set smartcase
+set hlsearch
 set showmatch
 set noerrorbells
-set incsearch
-set showmatch
+set novisualbell
+set t_vb=
+set tm=500
+set tabstop=4
+"""set colorcolumn=80
+set showcmd
 set cursorline
+set guioptions-=T
+set autoindent
+set incsearch
+set laststatus=2
+set backspace=2
+set relativenumber!
+set wrap
 
-map <F5> :PymodeRun<return>
+syntax enable
+colorscheme jellybeans
 
-"""disabling the arrow keys
-nnoremap <left> :undo<return>
-nnoremap <right> :redo<return>
-nnoremap <up> :q<return>
-nnoremap <down> :Autoformat<return>:SyntasticCheck<return>:w<return>
-inoremap <left> <nop>
-inoremap <right> <nop>
-inoremap <up> <nop>
-inoremap <down> <C-[>:Autoformat<return>:SyntasticCheck<return>:w<return>i
-inoremap <C-n> <C-w><C-w>
-nnoremap <C-n> <C-w><C-w>
+fun! CleanExtraSpaces()
+    let save_cursor = getpos(".")
+    let old_query = getreg('/')
+    silent! %s/\s\+$//e
+    call setpos('.', save_cursor)
+    call setreg('/', old_query)
+endfun
 
-
-hi User1 guifg=#dd3333
-hi User1 ctermfg=red
-
-
-let g:syntastic_always_populate_loc_list = 1
-let g:syntastic_auto_loc_list = 1
-let g:syntastic_check_on_open = 1
-let g:syntastic_check_on_wq = 0
-
-let g:undotree_WindowLayout = 1
-nnoremap <F7> :Tagbar<return>
-
-if has("persistent_undo")
-    set undodir=~/.undodir/
-    set undofile
+if has("autocmd")
+    autocmd BufWritePre *.txt,*.js,*.py,*.wiki,*.sh,*.coffee :call CleanExtraSpaces()
 endif
 
+set guioptions-=m  "remove menu bar
+set guioptions-=T  "remove toolbar
+set guioptions-=r  "remove right-hand scroll bar
+set guioptions-=L  "remove left-hand scroll bar
+
+" Disable Arrow keys in Escape mode
+map <up> <nop>
+map <down> <nop>
+map <left> <nop>
+map <right> <nop>
+
+" Disable Arrow keys in Insert mode
+imap <up> <nop>
+imap <down> <nop>
+imap <left> <nop>
+imap <right> <nop>
+
+let g:netrw_banner = 0
+let g:netrw_liststyle = 3
+
+let python_highlight_all = 1
+
+"split navigations
+nnoremap <C-J> <C-W><C-J>
+nnoremap <C-K> <C-W><C-K>
+nnoremap <C-L> <C-W><C-L>
+nnoremap <C-H> <C-W><C-H>
+
+" Enable folding
+set foldmethod=indent
+set foldlevel=99
+
+" Enable folding with the spacebar
+nnoremap <space> za
+
+set statusline=[%n]\ %<%F\ \ \ [%M%R%H%W%Y][%{&ff}]\ \ %=\ line:%l/%L\ col:%c\ \ \ %p%%\ \ \ @%{strftime(\"%H:%M:%S\")}
+
 nnoremap ; $a;<Esc>
-vmap f :fold<return>
-vmap fc :foldclose<return>
-nnoremap <return> i<return><Esc>
-nnoremap <Space> i<Space><Esc>
-nnoremap <del> i<del><Esc>
-
-nnoremap <F3> :NumbersToggle<CR>
-nnoremap <F4> :NumbersOnOff<CR>
-
-let g:neocomplcache_enable_at_startup = 1
 let mapleader=","
-
-set nofoldenable
-
-set selection=inclusive
-set guioptions-=r
-set guioptions-=L
-
-let g:syntastic_python_flake8_exec = 'python3'
-let g:syntastic_python_flake8_args = ['-m', 'flake8']
