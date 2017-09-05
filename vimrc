@@ -10,6 +10,8 @@ set novisualbell
 set t_vb=
 set tm=500
 set tabstop=4
+set shiftwidth=4
+set expandtab
 """set colorcolumn=80
 set showcmd
 set cursorline
@@ -28,6 +30,7 @@ set nofoldenable
 set scrolloff=10
 set sidescrolloff=15
 set sidescroll=1
+set noswapfile
 
 syntax enable
 colorscheme jellybeans
