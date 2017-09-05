@@ -20,6 +20,14 @@ set laststatus=2
 set backspace=2
 set relativenumber!
 set wrap
+set smartindent
+set smarttab
+set foldmethod=indent
+set foldnestmax=3
+set nofoldenable
+set scrolloff=10
+set sidescrolloff=15
+set sidescroll=1
 
 syntax enable
 colorscheme jellybeans
@@ -71,7 +79,7 @@ set foldlevel=99
 " Enable folding with the spacebar
 nnoremap <space> za
 
-set statusline=[%n]\ %<%F\ \ \ [%M%R%H%W%Y][%{&ff}]\ \ %=\ line:%l/%L\ col:%c\ \ \ %p%%\ \ \ @%{strftime(\"%H:%M:%S\")}
+set statusline=[%n]\ %<%F\ \ \ [%M%R%H%W%Y][%{&ff}]\ \ %=\ line:%l/%L\ col:%c\ \ \ %p%%\ \ \ @%{strftime(\"%H:%M\")}
 
 nnoremap ; $a;<Esc>
 let mapleader=","
