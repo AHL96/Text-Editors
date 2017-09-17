@@ -1,3 +1,5 @@
+execute pathogen#infect()
+
 set number
 set autoread
 set wildmenu
@@ -93,11 +95,10 @@ inoremap {<CR>  {<CR>}<Esc>O
 inoremap {{     {
 inoremap {}     {}
 
-inoremap { 		{}<Left>
+inoremap {      {}<Left>
 inoremap <expr> }  strpart(getline('.'), col('.')-1, 1) == "}" ? "\<Right>" : "}"
 
-
-inoremap (		()<Left>
+inoremap (      ()<Left>
 inoremap (<CR>  {<CR>}<Esc>O
 inoremap ((     (
 inoremap ()     ()
@@ -105,9 +106,13 @@ inoremap ()     ()
 inoremap        (  ()<Left>
 inoremap <expr> )  strpart(getline('.'), col('.')-1, 1) == ")" ? "\<Right>" : ")"
 
-inoremap "		""<Left>
+inoremap "      ""<Left>
 inoremap "<CR>  "<CR>"<Esc>O
 inoremap ""     "
 inoremap ""     ""
-
 inoremap <expr> " strpart(getline('.'), col('.')-1, 1) == "\"" ? "\<Right>" : "\"\"\<Left>"
+
+
+let g:user_emmet_leader_key='C-e>'
+
+
