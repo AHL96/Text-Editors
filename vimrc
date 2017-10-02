@@ -1,4 +1,19 @@
-execute pathogen#infect()
+set nocompatible              " be iMproved, required
+filetype off                  " required
+
+" set the runtime path to include Vundle and initialize
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
+Plugin 'gmarik/Vundle.vim'
+Plugin 'kien/ctrlp.vim'
+Plugin 'ervandew/supertab'
+Plugin 'Chiel92/vim-autoformat'
+Plugin 'tpope/vim-fugitive'
+Plugin 'bling/vim-airline'
+Plugin 'vim-airline/vim-airline-themes'
+Plugin 'mattn/emmet-vim'
+call vundle#end()            " required
+filetype plugin indent on    " required
 
 set number
 set autoread
@@ -84,7 +99,7 @@ set foldlevel=99
 " Enable folding with the spacebar
 nnoremap <space> za
 
-set statusline=[%n]\ %<%F\ \ \ [%M%R%H%W%Y][%{&ff}]\ \ %=\ line:%l/%L\ col:%c\ \ \ %p%%\ \ \ @%{strftime(\"%H:%M\")}
+""" set statusline=[%n]\ %<%F\ \ \ [%M%R%H%W%Y][%{&ff}]\ \ %=\ line:%l/%L\ col:%c\ \ \ %p%%\ \ \ @%{strftime(\"%H:%M\")}
 
 nnoremap ; $a;<Esc>
 let mapleader=","
