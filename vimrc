@@ -12,6 +12,7 @@ Plugin 'tpope/vim-fugitive'
 Plugin 'bling/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
 Plugin 'mattn/emmet-vim'
+Plugin 'jiangmiao/auto-pairs'
 call vundle#end()            " required
 filetype plugin indent on    " required
 
@@ -103,30 +104,6 @@ nnoremap <space> za
 
 nnoremap ; $a;<Esc>
 let mapleader=","
-
-"matching
-inoremap {      {}<Left>
-inoremap {<CR>  {<CR>}<Esc>O
-inoremap {{     {
-inoremap {}     {}
-
-inoremap {      {}<Left>
-inoremap <expr> }  strpart(getline('.'), col('.')-1, 1) == "}" ? "\<Right>" : "}"
-
-inoremap (      ()<Left>
-inoremap (<CR>  {<CR>}<Esc>O
-inoremap ((     (
-inoremap ()     ()
-
-inoremap        (  ()<Left>
-inoremap <expr> )  strpart(getline('.'), col('.')-1, 1) == ")" ? "\<Right>" : ")"
-
-inoremap "      ""<Left>
-inoremap "<CR>  "<CR>"<Esc>O
-inoremap ""     "
-inoremap ""     ""
-inoremap <expr> " strpart(getline('.'), col('.')-1, 1) == "\"" ? "\<Right>" : "\"\"\<Left>"
-
 
 let g:user_emmet_leader_key='C-e>'
 
