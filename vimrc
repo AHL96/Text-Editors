@@ -9,12 +9,16 @@ Plugin 'kien/ctrlp.vim'
 Plugin 'ervandew/supertab'
 Plugin 'Chiel92/vim-autoformat'
 Plugin 'tpope/vim-fugitive'
-Plugin 'bling/vim-airline'
+Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
 Plugin 'mattn/emmet-vim'
 Plugin 'jiangmiao/auto-pairs'
+Plugin 'leafgarland/typescript-vim'
 call vundle#end()            " required
 filetype plugin indent on    " required
+
+let g:airline_powerline_fonts = 1
+let g:airline#extensions#tabline#enabled = 1
 
 set number
 set autoread
@@ -72,13 +76,13 @@ set guioptions-=L  "remove left-hand scroll bar
 
 " Disable Arrow keys in Escape mode
 map <up> <nop>
-map <down> <nop>
+map <down> :Autoformat <return> :w <return>
 map <left> <nop>
 map <right> <nop>
 
 " Disable Arrow keys in Insert mode
 imap <up> <nop>
-imap <down> <nop>
+imap <down> <esc> :Autoformat <return> :w <return>
 imap <left> <nop>
 imap <right> <nop>
 
@@ -93,13 +97,6 @@ nnoremap <C-K> <C-W><C-K>
 nnoremap <C-L> <C-W><C-L>
 nnoremap <C-H> <C-W><C-H>
 
-" Enable folding
-set foldmethod=indent
-set foldlevel=99
-
-" Enable folding with the spacebar
-nnoremap <space> za
-
 """ set statusline=[%n]\ %<%F\ \ \ [%M%R%H%W%Y][%{&ff}]\ \ %=\ line:%l/%L\ col:%c\ \ \ %p%%\ \ \ @%{strftime(\"%H:%M\")}
 
 nnoremap ; $a;<Esc>
@@ -107,4 +104,4 @@ let mapleader=","
 
 let g:user_emmet_leader_key='C-e>'
 
-
+map <space> :bNext<return>
