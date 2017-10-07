@@ -76,13 +76,13 @@ set guioptions-=L  "remove left-hand scroll bar
 
 " Disable Arrow keys in Escape mode
 map <up> <nop>
-map <down> :Autoformat <return> :w <return>
+map <down> :Autoformat<return>
 map <left> <nop>
 map <right> <nop>
 
 " Disable Arrow keys in Insert mode
 imap <up> <nop>
-imap <down> <esc> :Autoformat <return> :w <return>
+imap <down> <nop>
 imap <left> <nop>
 imap <right> <nop>
 
@@ -104,4 +104,4 @@ let mapleader=","
 
 let g:user_emmet_leader_key='C-e>'
 
-map <space> :bNext<return>
+map <space> :w<return>:bNext<return>
