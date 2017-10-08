@@ -20,6 +20,8 @@ filetype plugin indent on    " required
 let g:airline_powerline_fonts = 1
 let g:airline#extensions#tabline#enabled = 1
 
+set guifont=Source\ Code\ Pro:h12
+
 set number
 set autoread
 set wildmenu
@@ -56,14 +58,6 @@ set noswapfile
 
 syntax enable
 colorscheme jellybeans
-
-fun! CleanExtraSpaces()
-    let save_cursor = getpos(".")
-    let old_query = getreg('/')
-    silent! %s/\s\+$//e
-    call setpos('.', save_cursor)
-    call setreg('/', old_query)
-endfun
 
 if has("autocmd")
     autocmd BufWritePre *.txt,*.js,*.py,*.wiki,*.sh,*.coffee :call CleanExtraSpaces()
