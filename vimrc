@@ -14,6 +14,8 @@ Plugin 'vim-airline/vim-airline-themes'
 Plugin 'mattn/emmet-vim'
 Plugin 'jiangmiao/auto-pairs'
 Plugin 'leafgarland/typescript-vim'
+Plugin 'nanotech/jellybeans.vim'
+Plugin 'base16-vim'
 call vundle#end()            " required
 filetype plugin indent on    " required
 
@@ -59,10 +61,6 @@ set noswapfile
 syntax enable
 colorscheme jellybeans
 
-if has("autocmd")
-    autocmd BufWritePre *.txt,*.js,*.py,*.wiki,*.sh,*.coffee :call CleanExtraSpaces()
-endif
-
 set guioptions-=m  "remove menu bar
 set guioptions-=T  "remove toolbar
 set guioptions-=r  "remove right-hand scroll bar
@@ -91,11 +89,9 @@ nnoremap <C-K> <C-W><C-K>
 nnoremap <C-L> <C-W><C-L>
 nnoremap <C-H> <C-W><C-H>
 
-""" set statusline=[%n]\ %<%F\ \ \ [%M%R%H%W%Y][%{&ff}]\ \ %=\ line:%l/%L\ col:%c\ \ \ %p%%\ \ \ @%{strftime(\"%H:%M\")}
-
 nnoremap ; $a;<Esc>
 let mapleader=","
 
-let g:user_emmet_leader_key='C-e>'
+let g:user_emmet_leader_key='<c-e>'
 
 map <space> :w<return>:bNext<return>
