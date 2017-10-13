@@ -94,8 +94,6 @@ nnoremap <C-H> <C-W><C-H>
 nnoremap ; $a;<Esc>
 let mapleader=","
 
-let g:user_emmet_leader_key='<c-e>'
-
 map <space> :w<return>:bNext<return>
 
 nmap <F8> :TagbarToggle<CR>
