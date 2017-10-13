@@ -16,6 +16,7 @@ Plugin 'jiangmiao/auto-pairs'
 Plugin 'leafgarland/typescript-vim'
 Plugin 'nanotech/jellybeans.vim'
 Plugin 'scrooloose/nerdcommenter'
+Plugin 'majutsushi/tagbar'
 call vundle#end()            " required
 filetype plugin indent on    " required
 
@@ -57,6 +58,7 @@ set scrolloff=10
 set sidescrolloff=15
 set sidescroll=1
 set noswapfile
+set mouse=a
 
 syntax enable
 colorscheme jellybeans
@@ -95,3 +97,5 @@ let mapleader=","
 let g:user_emmet_leader_key='<c-e>'
 
 map <space> :w<return>:bNext<return>
+
+nmap <F8> :TagbarToggle<CR>
