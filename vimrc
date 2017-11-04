@@ -15,8 +15,10 @@ Plugin 'mattn/emmet-vim'
 Plugin 'jiangmiao/auto-pairs'
 Plugin 'leafgarland/typescript-vim'
 Plugin 'nanotech/jellybeans.vim'
+Plugin 'endel/vim-github-colorscheme'
 Plugin 'scrooloose/nerdcommenter'
 Plugin 'majutsushi/tagbar'
+
 call vundle#end()            " required
 filetype plugin indent on    " required
 
@@ -61,7 +63,8 @@ set noswapfile
 set mouse=a
 
 syntax enable
-colorscheme jellybeans
+colorscheme github
+let g:airline_theme='papercolor'
 
 set guioptions-=m  "remove menu bar
 set guioptions-=T  "remove toolbar
