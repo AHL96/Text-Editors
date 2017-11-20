@@ -19,6 +19,8 @@ Plugin 'endel/vim-github-colorscheme'
 Plugin 'scrooloose/nerdcommenter'
 Plugin 'majutsushi/tagbar'
 
+Plugin 'scrooloose/syntastic'
+
 call vundle#end()            " required
 filetype plugin indent on    " required
 
@@ -63,8 +65,9 @@ set noswapfile
 set mouse=a
 
 syntax enable
-colorscheme github
-let g:airline_theme='papercolor'
+colorscheme jellybeans
+"colorscheme github
+"let g:airline_theme='papercolor'
 
 set guioptions-=m  "remove menu bar
 set guioptions-=T  "remove toolbar
@@ -97,6 +100,6 @@ nnoremap <C-H> <C-W><C-H>
 nnoremap ; $a;<Esc>
 let mapleader=","
 
-map <space> :w<return>:bNext<return>
+map <space> :bNext<return>
 
 nmap <F8> :TagbarToggle<CR>
