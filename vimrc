@@ -102,3 +102,5 @@ map <space> :bNext<return>
 nmap <F8> :TagbarToggle<CR>
 
 let &colorcolumn="80,".join(range(120,999),",")
+
+runtime macros/matchit.vim
