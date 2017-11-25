@@ -15,7 +15,6 @@ Plugin 'mattn/emmet-vim'
 Plugin 'jiangmiao/auto-pairs'
 Plugin 'leafgarland/typescript-vim'
 Plugin 'nanotech/jellybeans.vim'
-Plugin 'endel/vim-github-colorscheme'
 Plugin 'scrooloose/nerdcommenter'
 Plugin 'majutsushi/tagbar'
 
@@ -66,8 +65,6 @@ set mouse=a
 
 syntax enable
 colorscheme jellybeans
-"colorscheme github
-"let g:airline_theme='papercolor'
 
 set guioptions-=m  "remove menu bar
 set guioptions-=T  "remove toolbar
@@ -103,3 +100,5 @@ let mapleader=","
 map <space> :bNext<return>
 
 nmap <F8> :TagbarToggle<CR>
+
+let &colorcolumn="80,".join(range(120,999),",")
