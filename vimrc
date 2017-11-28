@@ -16,8 +16,7 @@ Plugin 'jiangmiao/auto-pairs'
 Plugin 'leafgarland/typescript-vim'
 Plugin 'scrooloose/nerdcommenter'
 Plugin 'majutsushi/tagbar'
-
-Plugin 'NLKNguyen/papercolor-theme'
+Plugin 'nanotech/jellybeans.vim'
 
 call vundle#end()            " required
 filetype plugin indent on    " required
@@ -64,7 +63,7 @@ set splitbelow
 set splitright
 
 syntax enable
-colorscheme PaperColor
+colorscheme jellybeans
 
 set guioptions-=m  "remove menu bar
 set guioptions-=T  "remove toolbar
@@ -72,7 +71,7 @@ set guioptions-=r  "remove right-hand scroll bar
 set guioptions-=L  "remove left-hand scroll bar
 
 " Disable Arrow keys in Escape mode
-map <up> <nop>
+map <up> :TagbarToggle<CR>
 map <down> :Autoformat<return>
 map <left> <nop>
 map <right> <nop>
