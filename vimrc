@@ -74,8 +74,8 @@ set guioptions-=L  "remove left-hand scroll bar
 " Disable Arrow keys in Escape mode
 map <up> :TagbarToggle<CR>
 map <down> :Autoformat<return>
-map <left> <nop>
-map <right> <nop>
+map <left> :undo<return>
+map <right> :redo<return>
 
 " Disable Arrow keys in Insert mode
 imap <up> <nop>
