@@ -16,7 +16,7 @@ Plugin 'jiangmiao/auto-pairs'
 Plugin 'leafgarland/typescript-vim'
 Plugin 'scrooloose/nerdcommenter'
 Plugin 'majutsushi/tagbar'
-Plugin 'nanotech/jellybeans.vim'
+Plugin 'NLKNguyen/papercolor-theme'
 
 call vundle#end()            " required
 filetype plugin indent on    " required
@@ -63,7 +63,8 @@ set splitbelow
 set splitright
 
 syntax enable
-colorscheme jellybeans
+colorscheme PaperColor
+set background=dark
 
 set guioptions-=m  "remove menu bar
 set guioptions-=T  "remove toolbar
