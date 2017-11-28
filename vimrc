@@ -14,11 +14,10 @@ Plugin 'vim-airline/vim-airline-themes'
 Plugin 'mattn/emmet-vim'
 Plugin 'jiangmiao/auto-pairs'
 Plugin 'leafgarland/typescript-vim'
-Plugin 'nanotech/jellybeans.vim'
 Plugin 'scrooloose/nerdcommenter'
 Plugin 'majutsushi/tagbar'
 
-Plugin 'scrooloose/syntastic'
+Plugin 'NLKNguyen/papercolor-theme'
 
 call vundle#end()            " required
 filetype plugin indent on    " required
@@ -42,7 +41,6 @@ set tm=500
 set tabstop=4
 set shiftwidth=4
 set expandtab
-"""set colorcolumn=80
 set showcmd
 set cursorline
 set guioptions-=T
@@ -62,9 +60,11 @@ set sidescrolloff=15
 set sidescroll=1
 set noswapfile
 set mouse=a
+set splitbelow
+set splitright
 
 syntax enable
-colorscheme jellybeans
+colorscheme PaperColor
 
 set guioptions-=m  "remove menu bar
 set guioptions-=T  "remove toolbar
@@ -104,3 +104,4 @@ nmap <F8> :TagbarToggle<CR>
 let &colorcolumn="80,".join(range(120,999),",")
 
 runtime macros/matchit.vim
+
