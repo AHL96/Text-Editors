@@ -1,3 +1,4 @@
+
 set nocompatible              " be iMproved, required
 filetype off                  " required
 
@@ -16,7 +17,10 @@ Plugin 'jiangmiao/auto-pairs'
 Plugin 'leafgarland/typescript-vim'
 Plugin 'scrooloose/nerdcommenter'
 Plugin 'majutsushi/tagbar'
-Plugin 'NLKNguyen/papercolor-theme'
+
+Plugin 'nanotech/jellybeans.vim'
+
+Plugin 'scrooloose/nerdtree'
 
 call vundle#end()            " required
 filetype plugin indent on    " required
@@ -63,7 +67,7 @@ set splitbelow
 set splitright
 
 syntax enable
-colorscheme PaperColor
+colorscheme jellybeans
 set background=dark
 
 set guioptions-=m  "remove menu bar
@@ -72,7 +76,7 @@ set guioptions-=r  "remove right-hand scroll bar
 set guioptions-=L  "remove left-hand scroll bar
 
 " Disable Arrow keys in Escape mode
-map <up> :TagbarToggle<CR>
+map <up> :TagbarToggle<return>
 map <down> :Autoformat<return>
 map <left> :undo<return>
 map <right> :redo<return>
@@ -105,3 +109,5 @@ let &colorcolumn="80,".join(range(120,999),",")
 
 runtime macros/matchit.vim
 
+nnoremap <return> i<return><Esc>
+nnoremap <F8> :NERDTreeToggle<return>
