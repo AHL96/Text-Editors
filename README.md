@@ -1,1 +1,3 @@
-# My Personal .Vimrc
+# My Personal text editor setups
+.vimrc
+.emacs
