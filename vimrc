@@ -9,7 +9,7 @@ Plugin 'gmarik/Vundle.vim'
 Plugin 'kien/ctrlp.vim'
 Plugin 'ervandew/supertab'
 Plugin 'Chiel92/vim-autoformat'
-Plugin 'tpope/vim-fugitive'
+Plugin 'airblade/vim-gitgutter'
 Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
 Plugin 'mattn/emmet-vim'
@@ -17,6 +17,7 @@ Plugin 'jiangmiao/auto-pairs'
 Plugin 'leafgarland/typescript-vim'
 Plugin 'scrooloose/nerdcommenter'
 Plugin 'majutsushi/tagbar'
+Plugin 'scrooloose/syntastic'
 
 Plugin 'nanotech/jellybeans.vim'
 
@@ -41,8 +42,8 @@ set noerrorbells
 set novisualbell
 set t_vb=
 set tm=500
-set tabstop=4
-set shiftwidth=4
+set tabstop=2
+set shiftwidth=2
 set expandtab
 set showcmd
 set cursorline
