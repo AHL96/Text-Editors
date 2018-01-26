@@ -6,22 +6,37 @@ filetype off                  " required
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 Plugin 'gmarik/Vundle.vim'
-Plugin 'kien/ctrlp.vim'
-Plugin 'ervandew/supertab'
+
+" Languages
+Plugin 'leafgarland/typescript-vim'
+
+" formating and syntax
+Plugin 'scrooloose/syntastic'
 Plugin 'Chiel92/vim-autoformat'
-Plugin 'airblade/vim-gitgutter'
-Plugin 'vim-airline/vim-airline'
-Plugin 'vim-airline/vim-airline-themes'
+
+" Faster typing
 Plugin 'mattn/emmet-vim'
 Plugin 'jiangmiao/auto-pairs'
-Plugin 'leafgarland/typescript-vim'
 Plugin 'scrooloose/nerdcommenter'
-Plugin 'majutsushi/tagbar'
-Plugin 'scrooloose/syntastic'
+Plugin 'ervandew/supertab'
 
-Plugin 'nanotech/jellybeans.vim'
-
+" UI
 Plugin 'scrooloose/nerdtree'
+Plugin 'majutsushi/tagbar'
+Plugin 'kien/ctrlp.vim'
+Plugin 'vim-airline/vim-airline'
+set guioptions-=m  "remove menu bar
+set guioptions-=T  "remove toolbar
+set guioptions-=r  "remove right-hand scroll bar
+set guioptions-=L  "remove left-hand scroll bar
+
+" Themes
+Plugin 'nanotech/jellybeans.vim'
+Plugin 'vim-airline/vim-airline-themes'
+
+" Git
+Plugin 'airblade/vim-gitgutter'
+Plugin 'tpope/vim-fugitive'
 
 call vundle#end()            " required
 filetype plugin indent on    " required
@@ -71,12 +86,7 @@ syntax enable
 colorscheme jellybeans
 set background=dark
 
-set guioptions-=m  "remove menu bar
-set guioptions-=T  "remove toolbar
-set guioptions-=r  "remove right-hand scroll bar
-set guioptions-=L  "remove left-hand scroll bar
-
-" Disable Arrow keys in Escape mode
+" map arrow keys in Normal mode
 map <up> :TagbarToggle<return>
 map <down> :Autoformat<return>
 map <left> :undo<return>
@@ -104,11 +114,10 @@ let mapleader=","
 
 map <space> :bNext<return>
 
-nmap <F8> :TagbarToggle<CR>
-
 let &colorcolumn="80,".join(range(120,999),",")
 
 runtime macros/matchit.vim
 
 nnoremap <return> i<return><Esc>
-nnoremap <F8> :NERDTreeToggle<return>
+
+nnoremap <S-up> :NERDTreeToggle<return>
