@@ -26,11 +26,12 @@
     ("#CC9393" "#DFAF8F" "#F0DFAF" "#7F9F7F" "#BFEBBF" "#93E0E3" "#94BFF3" "#DC8CC3")))
  '(package-selected-packages
    (quote
-    (electric-spacing zenburn-theme neotree helm flycheck evil color-theme-sanityinc-tomorrow ac-emmet)))
+    (electric-spacing zenburn-theme neotree helm flycheck color-theme-sanityinc-tomorrow ac-emmet)))
  '(pdf-view-midnight-colors (quote ("#DCDCCC" . "#383838")))
  '(scroll-bar-mode nil)
  '(show-paren-mode t)
  '(size-indication-mode t)
+ '(speedbar-show-unknown-files t)
  '(tool-bar-mode nil)
  '(tooltip-mode nil))
 (custom-set-faces
@@ -41,7 +42,7 @@
  )
 
 (ac-config-default)
-(electric-pair-mode 1)
+;; (electric-pair-mode 1)
 
 (add-to-list 'default-frame-alist '(font . "Source Code Pro 13"))
 (set-face-attribute 'default t :font "Source Code Pro 13")
@@ -59,7 +60,7 @@
 (setq make-backup-files nil) ; stop creating backup~ files
 (setq auto-save-default nil) ; stop creating #autosave# files
 
-(evil-mode 1)
+;;(evil-mode 1)
 
 (global-flycheck-mode 1)
 (global-hl-line-mode 1)
@@ -67,9 +68,7 @@
 (ido-mode t)
 
 (speedbar 1)
-(custom-set-variables
- '(speedbar-show-unknown-files t)
- )
+
 
 (setq-default
  whitespace-line-column 80
