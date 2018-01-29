@@ -26,7 +26,7 @@
     ("#CC9393" "#DFAF8F" "#F0DFAF" "#7F9F7F" "#BFEBBF" "#93E0E3" "#94BFF3" "#DC8CC3")))
  '(package-selected-packages
    (quote
-    (electric-spacing zenburn-theme neotree helm flycheck color-theme-sanityinc-tomorrow ac-emmet)))
+    (smooth-scrolling smooth-scroll electric-spacing zenburn-theme neotree helm flycheck color-qtheme-sanityinc-tomorrow ac-emmet)))
  '(pdf-view-midnight-colors (quote ("#DCDCCC" . "#383838")))
  '(scroll-bar-mode nil)
  '(show-paren-mode t)
@@ -76,6 +76,12 @@
 (add-hook 'prog-mode-hook #'whitespace-mode)
 
 (electric-spacing-mode 1)
+
+(require 'smooth-scroll)
+(smooth-scroll-mode t)
+
+(require 'smooth-scrolling)
+(smooth-scrolling-mode 1)
 
 (provide '.emacs)
 ;;; .emacs ends here
