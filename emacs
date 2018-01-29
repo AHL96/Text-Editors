@@ -75,5 +75,7 @@
 (require 'smooth-scrolling)
 (smooth-scrolling-mode 1)
 
+(global-git-gutter+-mode)
+
 (provide '.emacs)
 ;;; .emacs ends here
