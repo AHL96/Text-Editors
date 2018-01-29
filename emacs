@@ -22,7 +22,7 @@
     ("599f1561d84229e02807c952919cd9b0fbaa97ace123851df84806b067666332" default)))
  '(package-selected-packages
    (quote
-    (zenburn-theme smooth-scrolling smooth-scroll neotree helm git-gutter+ flycheck electric-spacing ac-emmet)))
+    (zenburn-theme smooth-scrolling smooth-scroll neotree helm flycheck electric-spacing ac-emmet)))
  '(scroll-bar-mode nil)
  '(show-paren-mode t)
  '(size-indication-mode t)
@@ -74,8 +74,6 @@
 
 (require 'smooth-scrolling)
 (smooth-scrolling-mode 1)
-
-(global-git-gutter+-mode)
 
 (provide '.emacs)
 ;;; .emacs ends here
