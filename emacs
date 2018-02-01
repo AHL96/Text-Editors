@@ -53,7 +53,7 @@
 (setq make-backup-files nil) ; stop creating backup~ files
 (setq auto-save-default nil) ; stop creating #autosave# files
 
-;;(evil-mode 1)
+(evil-mode 1)
 
 (global-flycheck-mode 1)
 (global-hl-line-mode 1)
