@@ -22,13 +22,17 @@
     ("599f1561d84229e02807c952919cd9b0fbaa97ace123851df84806b067666332" default)))
  '(package-selected-packages
    (quote
-    (zenburn-theme smooth-scrolling smooth-scroll neotree helm flycheck electric-spacing ac-emmet)))
+    (linum-relative zenburn-theme smooth-scrolling smooth-scroll neotree helm flycheck electric-spacing ac-emmet)))
  '(scroll-bar-mode nil)
  '(show-paren-mode t)
  '(size-indication-mode t)
  '(speedbar-show-unknown-files t)
  '(tool-bar-mode nil)
- '(tooltip-mode nil))
+ '(tooltip-mode nil)
+ '(linum-relative)
+ '(evil)
+ '(smooth-scroll)
+ '(smooth-scrolling))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
@@ -44,8 +48,6 @@
 
 (setq ring-bell-function 'ignore)
 
-(global-linum-mode 1)
-
 (global-set-key (kbd "M-x") 'helm-M-x)
 
 (put 'downcase-region 'disabled nil)
@@ -53,6 +55,7 @@
 (setq make-backup-files nil) ; stop creating backup~ files
 (setq auto-save-default nil) ; stop creating #autosave# files
 
+(linum-relative-global-mode 1)
 (evil-mode 1)
 
 (global-flycheck-mode 1)
@@ -69,10 +72,8 @@
 
 (electric-spacing-mode 1)
 
-(require 'smooth-scroll)
 (smooth-scroll-mode t)
 
-(require 'smooth-scrolling)
 (smooth-scrolling-mode 1)
 
 (provide '.emacs)
