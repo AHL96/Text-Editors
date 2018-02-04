@@ -81,10 +81,10 @@ set noswapfile
 set mouse=a
 set splitbelow
 set splitright
+setlocal spell spelllang=en_us
 
 syntax enable
 colorscheme jellybeans
-set background=dark
 
 " map arrow keys in Normal mode
 map <up> :TagbarToggle<return>
