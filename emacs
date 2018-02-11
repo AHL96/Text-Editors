@@ -1,7 +1,7 @@
 
 (require 'package)
 (let* ((no-ssl (and (memq system-type '(windows-nt ms-dos))
-                    (not (gnutls-available-p))))
+		    (not (gnutls-available-p))))
        (proto (if no-ssl "http" "https")))
   ;; Comment/uncomment these two lines to enable/disable MELPA and MELPA Stable as desired
   (add-to-list 'package-archives (cons "melpa" (concat proto "://melpa.org/packages/")) t)
@@ -17,28 +17,19 @@
  ;; If there is more than one, they won't work right.
  '(column-number-mode t)
  '(custom-enabled-themes (quote (zenburn)))
- '(custom-safe-themes
-   (quote
-    ("599f1561d84229e02807c952919cd9b0fbaa97ace123851df84806b067666332" default)))
+ '(evil nil)
+ '(linum-relative nil)
  '(package-selected-packages
    (quote
     (linum-relative zenburn-theme smooth-scrolling smooth-scroll neotree helm flycheck electric-spacing ac-emmet)))
  '(scroll-bar-mode nil)
  '(show-paren-mode t)
  '(size-indication-mode t)
+ '(smooth-scroll nil)
+ '(smooth-scrolling nil)
  '(speedbar-show-unknown-files t)
  '(tool-bar-mode nil)
- '(tooltip-mode nil)
- '(linum-relative)
- '(evil)
- '(smooth-scroll)
- '(smooth-scrolling))
-(custom-set-faces
- ;; custom-set-faces was added by Custom.
- ;; If you edit it by hand, you could mess it up, so be careful.
- ;; Your init file should contain only one such instance.
- ;; If there is more than one, they won't work right.
- )
+ '(tooltip-mode nil))
 
 (ac-config-default)
 (electric-pair-mode 1)
@@ -52,7 +43,7 @@
 
 (put 'downcase-region 'disabled nil)
 
-(setq make-backup-files nil) ; stop creating backup~ files
+					; (setq make-backup-files nil) ; stop creating backup~ files
 (setq auto-save-default nil) ; stop creating #autosave# files
 
 (linum-relative-global-mode 1)
@@ -72,7 +63,7 @@
 
 (electric-spacing-mode 1)
 
-(smooth-scroll-mode t)
+(smooth-scroll-mode 1)
 
 (smooth-scrolling-mode 1)
 
