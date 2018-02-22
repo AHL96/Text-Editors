@@ -17,6 +17,9 @@
  ;; If there is more than one, they won't work right.
  '(column-number-mode t)
  '(custom-enabled-themes (quote (zenburn)))
+ '(custom-safe-themes
+   (quote
+    ("599f1561d84229e02807c952919cd9b0fbaa97ace123851df84806b067666332" default)))
  '(evil nil)
  '(linum-relative nil)
  '(package-selected-packages
@@ -25,8 +28,8 @@
  '(scroll-bar-mode nil)
  '(show-paren-mode t)
  '(size-indication-mode t)
- '(smooth-scroll nil)
- '(smooth-scrolling nil)
+ '(smooth-scroll t)
+ '(smooth-scrolling t)
  '(speedbar-show-unknown-files t)
  '(tool-bar-mode nil)
  '(tooltip-mode nil))
@@ -43,7 +46,7 @@
 
 (put 'downcase-region 'disabled nil)
 
-					; (setq make-backup-files nil) ; stop creating backup~ files
+; (setq make-backup-files nil) ; stop creating backup~ files
 (setq auto-save-default nil) ; stop creating #autosave# files
 
 (linum-relative-global-mode 1)
@@ -63,9 +66,6 @@
 
 (electric-spacing-mode 1)
 
-(smooth-scroll-mode 1)
-
-(smooth-scrolling-mode 1)
 
 (provide '.emacs)
 ;;; .emacs ends here
