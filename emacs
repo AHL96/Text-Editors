@@ -20,7 +20,7 @@
  '(make-backup-files nil)
  '(package-selected-packages
    (quote
-    (flycheck smooth-scrolling linum-relative auto-complete evil helm helm-ebdb)))
+    (emmet-mode flycheck smooth-scrolling linum-relative auto-complete evil helm helm-ebdb)))
  '(scroll-bar-mode nil)
  '(show-paren-mode t)
  '(size-indication-mode t)
