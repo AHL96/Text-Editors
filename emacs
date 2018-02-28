@@ -57,5 +57,7 @@
 (setq mouse-wheel-follow-mouse 't) ;; scroll window under mouse
 (setq scroll-step 1) ;; keyboard scroll one line at a time
 
+(setq ring-bell-function 'ignore)
+
 (provide '.emacs)
 ;;; .emacs ends here
