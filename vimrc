@@ -41,7 +41,6 @@ Plugin 'tpope/vim-fugitive'
 call vundle#end()            " required
 filetype plugin indent on    " required
 
-let g:airline_powerline_fonts = 1
 let g:airline#extensions#tabline#enabled = 1
 
 set guifont=Source\ Code\ Pro:h12
@@ -97,6 +96,8 @@ imap <up> <nop>
 imap <down> <nop>
 imap <left> <nop>
 imap <right> <nop>
+
+imap ;; <ESC>
 
 let g:netrw_banner = 0
 let g:netrw_liststyle = 3
