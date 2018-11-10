@@ -7,9 +7,6 @@ set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 Plugin 'gmarik/Vundle.vim'
 
-" Languages
-Plugin 'leafgarland/typescript-vim'
-
 " formating and syntax
 Plugin 'scrooloose/syntastic'
 Plugin 'Chiel92/vim-autoformat'
@@ -19,6 +16,7 @@ Plugin 'mattn/emmet-vim'
 Plugin 'jiangmiao/auto-pairs'
 Plugin 'scrooloose/nerdcommenter'
 Plugin 'ervandew/supertab'
+Plugin 'easymotion/vim-easymotion'
 
 " UI
 Plugin 'scrooloose/nerdtree'
